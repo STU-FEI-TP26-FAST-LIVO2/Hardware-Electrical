@@ -10,12 +10,28 @@ vyrobne podklady.
 .
 ├── Bluepill_zapojenie/
 │   ├── src/       # EAGLE schema, board a CAM/job/projektove subory
-│   └── exports/   # Gerber export pre vyrobu PCB
+│   └── exports/   # PDF exporty schem/dosky a Gerber ZIP
 ├── IMU_zapojenie/
-│   └── src/       # Schema zapojenia STM/Nucleo a IMU konektora
+│   ├── src/       # EAGLE schema zapojenia STM/Nucleo a IMU konektora
+│   └── exports/   # PDF a PNG exporty schemy
+├── Komunikacne_schemy/
+│   ├── TP_BlokovaSchema.drawio
+│   └── TP_BlokovaSchema.png
 └── MAX3232_zapojenie/
-    └── src/       # Schema zapojenia STM/Nucleo a MAX3232 rozhrania
+    ├── src/       # EAGLE schema zapojenia STM/Nucleo a MAX3232 rozhrania
+    └── exports/   # PDF a PNG exporty schemy
 ```
+
+Exportovane nahlady a dokumenty:
+
+- `Bluepill_zapojenie/exports/` - PDF schemy/dosky a
+  `full_schematic_board_GERBER.zip`.
+- `IMU_zapojenie/exports/` - `STM_IMU.png`,
+  `Zapojenie_STM_EPSON_A4.pdf`, `Zapojenie_STM_EPSON_A5.pdf`.
+- `MAX3232_zapojenie/exports/` - `MAX3232.png`, `MAX3232_A4.pdf`,
+  `MAX3232_A5.pdf`.
+- `Komunikacne_schemy/` - `TP_BlokovaSchema.drawio` a
+  `TP_BlokovaSchema.png`.
 
 ## Moduly
 
@@ -44,6 +60,14 @@ Schema pre prepojenie dosky `NUCLEO-F303K8` s MAX3232/RS-232 konektorovou
 castou. Hlavny subor:
 
 - `src/MAX3232_zapojenie.sch`
+
+### Komunikacne_schemy
+
+Blokove/komunikacne schemy systemu. Priecinok obsahuje editovatelny Draw.io
+subor a exportovany PNG nahlad:
+
+- `TP_BlokovaSchema.drawio`
+- `TP_BlokovaSchema.png`
 
 ## BOM na osadenie PCB
 
