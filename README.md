@@ -54,6 +54,9 @@ Schema pre prepojenie dosky `NUCLEO-F303K8` s IMU konektorom. Hlavny subor:
 
 - `src/Zapojenie_STM_EPSON.sch`
 
+Pre správne zapojenie IMU (Inertial Measurement Unit) bola použitá oficiálna dokumentácia k doskám typu **24 CLICK**. Z tejto dokumentácie boli presne obkreslené polohy a správne rozstupové rozmedzia pinov (cez poskytnutý STL a footprint), aby bola zaručená mechanická a elektrická kompatibilita.
+Referenčný modul: [6DOF IMU 24 Click](https://www.mikroe.com/6dof-imu-24-click?srsltid=AfmBOopXifQUx5eslR1XnWNQ_cjDjcsM_FVL3atVTf2INUSxUIHtFeJk)
+
 ### MAX3232_zapojenie
 
 Schema pre prepojenie dosky `NUCLEO-F303K8` s MAX3232/RS-232 konektorovou
@@ -68,6 +71,25 @@ subor a exportovany PNG nahlad:
 
 - `TP_BlokovaSchema.drawio`
 - `TP_BlokovaSchema.png`
+
+## Výpočet napájania a dimenzovanie akumulátora
+
+Na zabezpečenie spoľahlivej prevádzky prenosného systému po dobu minimálne 30 minút bol stanovený celkový energetický odber a vypočítaná požadovaná kapacita napájacieho zdroja.
+
+- **Celkový príkon systému ($P_{total}$):** Súčet maximálnych príkonov jednotlivých komponentov integrovaných v systéme.
+  $P_{total} = 60 + 9 + 3.4 + 0.05 = 72.5 \text{ W}$
+- **Požadovaná energia ($E$):** Pre požadovanú dobu prevádzky $t = 0.5 \text{ h}$ bol do výpočtu zahrnutý bezpečnostný koeficient $1.25$ (25 % rezerva na straty meničov a degradáciu článkov) a výpočtový príkon bol zaokrúhlený na $75 \text{ W}$.
+  $E = 75 \text{ W} \cdot 0.5 \text{ h} \cdot 1.25 \approx 50 \text{ Wh}$
+- **Požadovaná kapacita ($C$):** Pri dimenzovaní na uvažované systémové napätie 12 V.
+  $C = \frac{50 \text{ Wh}}{12 \text{ V}} \approx 4.2 \text{ Ah}$
+
+Na základe týchto parametrov a pre zaistenie dostatočnej prúdovej aj kapacitnej rezervy bol ako napájací zdroj zvolený **Li-Po (lítium-polymérový) akumulátor** v konfigurácii **4S** (nominálne napätie 14.8 V) s kapacitou **5.5 Ah** od výrobcu **Amewi**.
+
+## Použité externé knižnice
+
+V projekte sú použité nasledovné externé EAGLE knižnice:
+- [NUCLEO-F303K8.lbr](https://github.com/martonmiklos/EAGLE-libraries/blob/master/NUCLEO-F303K8.lbr)
+- [BluePill.lbr](https://github.com/sagarHackeD/STM32Bluepill_eagle/blob/master/BluePill.lbr)
 
 ## BOM na osadenie PCB
 
