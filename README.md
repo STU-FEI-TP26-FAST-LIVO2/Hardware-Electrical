@@ -1,30 +1,30 @@
-# TP-Hardware *
+# TP-Hardware
 
-Hardverova cast projektu vytvorena v Autodesk EAGLE / Fusion Electronics.
-Repozitar obsahuje schemy zapojeni, navrh PCB pre Bluepill dosku a exportovane
-vyrobne podklady.
+Hardvérová časť projektu vytvorená v Autodesk EAGLE / Fusion Electronics.
+Repozitár obsahuje schémy zapojení, návrh PCB pre Bluepill dosku a exportované
+výrobné podklady.
 
-## Obsah repozitara
+## Obsah repozitára
 
 ```text
 .
 ├── Bluepill_zapojenie/
-│   ├── src/       # EAGLE schema, board a CAM/job/projektove subory
-│   └── exports/   # PDF exporty schem/dosky a Gerber ZIP
+│   ├── src/       # EAGLE schéma, board a CAM/job/projektové súbory
+│   └── exports/   # PDF exporty schém/dosky a Gerber ZIP
 ├── IMU_zapojenie/
-│   ├── src/       # EAGLE schema zapojenia STM/Nucleo a IMU konektora
-│   └── exports/   # PDF a PNG exporty schemy
+│   ├── src/       # EAGLE schéma zapojenia STM/Nucleo a IMU konektora
+│   └── exports/   # PDF a PNG exporty schémy
 ├── Komunikacne_schemy/
 │   ├── TP_BlokovaSchema.drawio
 │   └── TP_BlokovaSchema.png
 └── MAX3232_zapojenie/
-    ├── src/       # EAGLE schema zapojenia STM/Nucleo a MAX3232 rozhrania
-    └── exports/   # PDF a PNG exporty schemy
+    ├── src/       # EAGLE schéma zapojenia STM/Nucleo a MAX3232 rozhrania
+    └── exports/   # PDF a PNG exporty schémy
 ```
 
-Exportovane nahlady a dokumenty:
+Exportované náhľady a dokumenty:
 
-- `Bluepill_zapojenie/exports/` - PDF schemy/dosky a
+- `Bluepill_zapojenie/exports/` - PDF schémy/dosky a
   `full_schematic_board_GERBER.zip`.
 - `IMU_zapojenie/exports/` - `STM_IMU.png`,
   `Zapojenie_STM_EPSON_A4.pdf`, `Zapojenie_STM_EPSON_A5.pdf`.
@@ -37,20 +37,20 @@ Exportovane nahlady a dokumenty:
 
 ### Bluepill_zapojenie
 
-Hlavna doska okolo modulu Blue Pill. V repozitari su dve varianty schemy:
+Hlavná doska okolo modulu Blue Pill. V repozitári sú dve varianty schémy:
 
-- `src/BLUEPILL_full_schematic.sch` - schema s Blue Pill modulom, IMU konektorom,
-  konektorom `J3` a vlastnym symbolom `MAX3232_CUSTOM`.
-- `src/BLUEPILL_full_schematic for BRD.sch` - schema naviazana na PCB layout.
-- `src/BLUEPILL_full_schematic for BRD.brd` - EAGLE board subor.
-- `exports/full_schematic_board_GERBER.zip` - export pre vyrobu dosky.
+- `src/BLUEPILL_full_schematic.sch` - schéma s Blue Pill modulom, IMU konektorom,
+  konektorom `J3` a vlastným symbolom `MAX3232_CUSTOM`.
+- `src/BLUEPILL_full_schematic for BRD.sch` - schéma naviazaná na PCB layout.
+- `src/BLUEPILL_full_schematic for BRD.brd` - EAGLE board súbor.
+- `exports/full_schematic_board_GERBER.zip` - export pre výrobu dosky.
 
-Gerber archiv obsahuje vrstvy medi, masky, potlace, pasty, profil dosky,
-drill subor a zakladne assembly vystupy.
+Gerber archív obsahuje vrstvy medi, masky, potlače, pasty, profil dosky,
+drill súbor a základné assembly výstupy.
 
 ### IMU_zapojenie
 
-Schema pre prepojenie dosky `NUCLEO-F303K8` s IMU konektorom. Hlavny subor:
+Schéma pre prepojenie dosky `NUCLEO-F303K8` s IMU konektorom. Hlavný súbor:
 
 - `src/Zapojenie_STM_EPSON.sch`
 
@@ -59,15 +59,15 @@ Referenčný modul: [6DOF IMU 24 Click](https://www.mikroe.com/6dof-imu-24-click
 
 ### MAX3232_zapojenie
 
-Schema pre prepojenie dosky `NUCLEO-F303K8` s MAX3232/RS-232 konektorovou
-castou. Hlavny subor:
+Schéma pre prepojenie dosky `NUCLEO-F303K8` a konektorovej časti MAX3232/RS-232. 
+Hlavný súbor:
 
 - `src/MAX3232_zapojenie.sch`
 
 ### Komunikacne_schemy
 
-Blokove/komunikacne schemy systemu. Priecinok obsahuje editovatelny Draw.io
-subor a exportovany PNG nahlad:
+Blokové/komunikačné schémy systému. Priečinok obsahuje editovateľný Draw.io
+súbor a exportovaný PNG náhľad:
 
 - `TP_BlokovaSchema.drawio`
 - `TP_BlokovaSchema.png`
@@ -93,48 +93,48 @@ V projekte sú použité nasledovné externé EAGLE knižnice:
 
 ## BOM na osadenie PCB
 
-| Co to je | Pocet |
+| Čo to je | Počet |
 | --- | ---: |
-| Kable XH2.54 samica/samec, 2-pin | 1 |
-| Kable XH2.54 samica/samec, 3-pin | 2 |
-| Kable XH2.54 samica/samec, 4-pin | 1 |
-| Konektor XH2.54 rovny, 2-pin | 1 |
-| Konektor XH2.54 rovny, 3-pin | 2 |
-| Konektor XH2.54 rovny, 4-pin | 1 |
-| Predlzovaci USB 3.0 kabel male-female, 0.5 m | 2 |
-| Kabel LiDAR DC005 samec, 2 m | 1 |
+| Káble XH2.54 samica/samec, 2-pin | 1 |
+| Káble XH2.54 samica/samec, 3-pin | 2 |
+| Káble XH2.54 samica/samec, 4-pin | 1 |
+| Konektor XH2.54 rovný, 2-pin | 1 |
+| Konektor XH2.54 rovný, 3-pin | 2 |
+| Konektor XH2.54 rovný, 4-pin | 1 |
+| Predlžovací USB 3.0 kábel male-female, 0.5 m | 2 |
+| Kábel LiDAR DC005 samec, 2 m | 1 |
 | Female piny 2.54 mm, 40 ks, 1 riadok | 2 |
-| Female piny 2.54 mm, kratke, 8-pin | 2 |
+| Female piny 2.54 mm, krátke, 8-pin | 2 |
 
-- na uchytenie PCB su pripravene 3.2 mm diery 
+- na uchytenie PCB sú pripravené 3.2 mm diery 
 
-## Ako projekt otvorit
+## Ako projekt otvoriť
 
-1. Nainstaluj Autodesk EAGLE alebo Fusion 360 Electronics.
-2. Otvor prislusny `.sch` subor pre schemu.
-3. Pri Bluepill doske otvor aj `.brd` subor s rovnakym nazvom, aby schema a PCB
-   zostali synchronizovane (!PRI UPRAVE MUSIA BYT OTVORENE OBA SUBORY).
-4. Pred dalsim exportom skontroluj ERC/DRC a CAM nastavenia v EAGLE.
+1. Nainštaluj Autodesk EAGLE alebo Fusion 360 Electronics.
+2. Otvor príslušný `.sch` súbor pre schému.
+3. Pri Bluepill doske otvor aj `.brd` súbor s rovnakým názvom, aby schéma a PCB
+   zostali synchronizované (!PRI ÚPRAVE MUSIA BYŤ OTVORENÉ OBA SÚBORY).
+4. Pred ďalším exportom skontroluj ERC/DRC a CAM nastavenia v EAGLE.
 
-## Vyrobne podklady
+## Výrobné podklady
 
-Aktualne exportovane podklady su v:
+Aktuálne exportované podklady sú v:
 
 ```text
 Bluepill_zapojenie/exports/full_schematic_board_GERBER.zip
 ```
 
-Pred odoslanim do vyroby odporucane kontroly:
+Pred odoslaním do výroby odporúčané kontroly:
 
-- otvorit Gerber subory v nezavislom Gerber vieweri,
-- skontrolovat orientaciu, obrys dosky a vrtanie,
-- overit konektory, napajanie a mechanicke rozmery,
-- porovnat aktualny `.brd` subor s exportovanym ZIP archivom.
+- otvoriť Gerber súbory v nezávislom Gerber vieweri,
+- skontrolovať orientáciu, obrys dosky a vŕtanie,
+- overiť konektory, napájanie a mechanické rozmery,
+- porovnať aktuálny `.brd` súbor s exportovaným ZIP archívom.
 
-## Poznamky k suborom
+## Poznámky k súborom
 
-- `.sch` - EAGLE schema.
+- `.sch` - EAGLE schéma.
 - `.brd` - EAGLE PCB layout.
-- `.pro` - projektovy subor EAGLE.
-- `.job` - CAM/export konfiguracia.
-- `s#`, `b#` a podobne subory su automaticke zalohy vytvorene EAGLE.
+- `.pro` - projektový súbor EAGLE.
+- `.job` - CAM/export konfigurácia.
+- `s#`, `b#` a podobné súbory sú automatické zálohy vytvorené programom EAGLE.
