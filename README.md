@@ -1,4 +1,4 @@
-# TP-Hardware *
+# TP-Hardware
 
 Hardvérová časť projektu vytvorená v Autodesk EAGLE / Fusion Electronics.
 Repozitár obsahuje schémy zapojení, návrh PCB pre Bluepill dosku a exportované
